@@ -1,1 +1,1 @@
-Core Java POC’s.
+Simple HelloWorld program.
