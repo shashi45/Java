@@ -1,1 +1,2 @@
-Simple HelloWorld program.
+Core Java demos.
+================
