@@ -9,6 +9,10 @@ public class StringApp {
 		// just to support rich international set of characters.).
 		// Strings are immutable objects, that means once created and can never
 		// be changed.
+//------------
+		//Section 1
+		//Creating a new String
+		{
 		// Strings objects can be instantiated just like any other objects .
 		String newString = new String("firstString"); // 1
 		// A String can also assigned a value using string literals.
@@ -29,8 +33,9 @@ public class StringApp {
 		// Answer is string references are not immutable, that means we can
 		// point the reference to any string object without actually creating or
 		// manipulating a string.
-
-		// //////////Section 2
+	}
+//-----------------------------		
+		// Section 2
 		{
 			// String concat method
 			// we can concat two string in java and that can done as follows.
@@ -66,7 +71,7 @@ public class StringApp {
 			// assigning to any variable and it is lost instantly.
 			// We are trying to print s2 which is still referring to "Hello"
 			// object.
-			// ------------------------------------------
+// ------------------------------------------
 			// String concatenation using '+'
 
 			// We can concatenate two strings using '+' operator too and that
@@ -77,60 +82,115 @@ public class StringApp {
 			System.out
 					.println("String concatenation using '+' operator: " + s3);
 
+			// String concat v/s '+' operator
+			// A string can be concatenated either using string.concat() method
+			// or
+			// '+' operator.
+			// Their are subtle differences between both.
+
+			// We can add anything to a string using + operator.
+			// for example we are adding null to a
+			String s4 = null;
+			s4 = s4 + "string4";
+			System.out.println("adding null and string4 and the output is : "
+					+ s4);
+			// the above statement prints "nullstring2" as output.
+
+			// above example using concat statement
+			String s5 = null;
+			try {
+				s5 = s5.concat("string5");
+				System.out.println("concatenating null with string5: " + s5);
+			} catch (Exception e) {
+				System.out.println("exception: " + e);
+			}
+			// The output for the above statements is a NPE, that is if we see
+			// the
+			// implementation of the concat method in the
+			// java.lang.String class they were checking for length of the
+			// argument
+			// of the input string we are passing.
+			// which is the ideal behavior, we cannot concat a null reference to
+			// a
+			// string object.
+
+			// Using '+' operator we can add any type to a string.
+			// Example...
+			String s6 = 1 + "two";
+
+			System.out.println("Output of 1+two is " + s6);
+
+			// the above example is adding an integer 1 to string two.
+//------------
+			// SubSection 1
+			{
+				// The main difference between concat and '+' is String concat
+				// methods concatenates two strings but
+				// '+' operator adds any type to a string.
+				// Adding null to another string using concat methods results in
+				// NPE.
+				boolean b = true;
+				String s7 = b + "false";
+				System.out.println("s7: " + s7);
+
+				System.out.println("adding 1 + 2----> " + 1 + 2
+						+ "   adding (1 +2)----> " + (1 + 2));
+				// The above statement is the best example for what happens if
+				// we try to add 1 and 2 with out parenthesis.
+
+				// The below example is from SCJP
+				String s11 = "spring ";
+				String s22 = s11 + "summer ";
+				s11.concat("fall ");
+				s22.concat(s11);
+				s11 += "winter ";
+				//Guess the output
+				System.out.println(s11 + " " + s22);
+				
+			}
+			//Just like what happened with concat method, toLowerCase() and toUpperCase() methods creates a new string object by making the characters to 
+			// either lower case or upper case letters.
+			//Example 
+			String s8 = "java";
+			s8.toUpperCase();
+			System.out.println("converting the lower case of s8 to uppercase without assigning the output to any reference variable: "+ s8);
+			s8 = s8.toUpperCase();
+			System.out.println("converting the lower case of s8 to uppercase and assigning the output to same variable: "+ s8);
+			//Observer the output of both the above cases.
+			
 		}
-
-		// String concat v/s '+' operator
-		// A string can be concatenated either using string.concat() method or
-		// '+' operator.
-		// Their are subtle differences between both.
-
-		// We can add anything to a string using + operator.
-		// for example we are adding null to a
-		String s4 = null;
-		s4 = s4 + "string4";
-		System.out.println("adding null and string4 and the output is : " + s4);
-		// the above statement prints "nullstring2" as output.
-
-		// above example using concat statement
-		String s5 = null;
-		try {
-			s5 = s5.concat("string5");
-			System.out.println("concatenating null with string5: " + s5);
-		} catch (Exception e) {
-			System.out.println("exception: " + e);
+//--------------------------
+		//Section 3 
+		{
+			//Other string methods.
+			
+			//replace(char old, char new)
+			String s9 = "JaVa";
+			s9 = s9.replace('a', 'A');
+			System.out.println("repacing 'a' with 'A' in string JaVa: "+ s9);
+			
+			//    charAt(int index)
+			String s10 = "java";
+			System.out.println("char at 2: "+ s10.charAt(2));
+			
+			//equalsIgnoreCase(String s)
+			String s11 = "Java";
+			System.out.println("Ignoring cases: "+ s11.equalsIgnoreCase("JAVA"));
+			
+			//length()
+			//String class has a separate method which returns the length of the string.
+			String s12 = "java";
+					System.out.println("Length of the string: "+ s12.length());
+			//toString()
+			// Might be wondering why there toString() method in String class which would be doing nothing, 
+			// That is becasue since all the objects have to invoke string method for ,
+		
 		}
-		// The output for the above statements is a NPE, that is if we see the
-		// implementation of the concat method in the
-		// java.lang.String class they were checking for length of the argument
-		// of the input string we are passing.
-		// which is the ideal behavior, we cannot concat a null reference to a
-		// string object.
-
-		// Using '+' operator we can add any type to a string.
-		// Example...
-		String s6 = 1 + "two";
-		
-		System.out.println("Output of 1+two is " + s6);
-		
-		// the above example is adding an integer 1 to string two.
-		
-		// The main difference between concat and '+' is String concat methods concatenates two strings but 
-		// '+' operator adds any type to a string. 
-		// Adding null to another string using concat methods results in NPE.
-		boolean b = true;
-		String s7 = b + "false";
-		System.out.println("s7: "+s7);
-		
-		System.out.println("adding 1 + 2----> "+ 1+2+ "   adding (1 +2)----> "+ (1+2));
-		//The above statement is the best example for what happens if we try to add 1 and 2 with out parenthesis.
-		
-		//The below example is from SCJP
-		String s1 = "spring ";
-        String s2 = s1 + "summer ";
-        s1.concat("fall ");
-        s2.concat(s1);
-        s1 += "winter ";
-        System.out.println(s1 + " " + s2);
-
+		String s13 = "Java";
+		char[] c = new char[s13.length()];
+		c=s13.toCharArray();
+		s13.getChars(0, 4, c, 0);
+		System.out.println(" java: "+ c[1]);
+		System.out.println("10 * 5 "+ 10*5);
 	}
 }
