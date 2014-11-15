@@ -1,8 +1,9 @@
-Core Java demos.
-================
 
-StringApp.java
-==============
+String
+=======
+---
+
+
 The contents in the file are divided into sections,
 
 1) Section 1
