@@ -48,9 +48,13 @@ Other important methods in StringBuffer and StringBuilder.
 
 
 *******
-StringApp.md ReadMe file contains the following,
+[StringApp.md][1] ReadMe file contains the following,
 
 * Strings and its Memory.
 * Why String is an immutable class?
 * What are the implications if String is not immutable?
 *******
+
+
+
+[1] https://github.com/shashi45/Java/blob/master/StringApp.md
