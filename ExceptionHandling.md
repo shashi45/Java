@@ -154,3 +154,68 @@ StackOverflowError, this exception would be thrown when the JVM runs out of memo
 
 Programmatic Exception: created by application/API developer.
 NumberFormatException, IllegalArgumentException
+
+
+
+*********EXCEPTIONS,,RUNTIME EXCEPTIONS ERRORS, THROWABLE types can all be thrown using throw keyword and can be handled.
+
+But we rarely catch all those except exceptions(Compile time exceptions).
+
+
+
+*****Exception Matching: when an exceptions is thrown JVM tries to find a match for the exception if it doesn’t finds one, then it tries to find the super class for that exception. if it doesn’t finds one then the exception is propagated down the call stack.
+
+
+
+*****Declaring the exception using the keyword throw.
+
+—CompileTimeException either has to be handled or has to be declared(The compiler checks to make sure they are handled or declared).
+
+—RunTimeException can or can’t be declared or handled.
+
+
+
+—ArrayOutOfBoundException
+
+—— IndexOutOfBoundException(RunTimeException)
+
+—StringIndexOutOfBoundException
+
+
+
+—FileNotFoundException
+
+——IOException(CompileTimeException)
+
+—EOFException
+
+
+
+— NumberFormatExcepiton 
+
+IllegalArgumentException
+
+—IllergalStateException
+
+—StackOverflowError
+
+
+
+
+
+*******JVM Exceptions: 
+
+Exceptions or errors that are either Exclusively or most logically thrown by JVM
+
+Ex: NullPointerExecption.
+
+*******Programmatic Exception
+
+Those exception explicitly thrown by application or API programs.
+
+
+
+*******Stack resides in memory.
+
+
+
