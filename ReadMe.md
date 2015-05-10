@@ -5,7 +5,7 @@ Core Java POC's:
 1. [String][1]
 2. [VariableScope][2]
 3. [Array][3]
-4. [ExceptionHandling[4]]
+4. [ExceptionHandling][4]
 5. [HidingShadowingObscuring][5]
 6. [UnixCommands][6]
 7. [Overlaoding][7]
